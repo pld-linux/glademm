@@ -20,6 +20,11 @@ this program reads glade files and outputs a C++ program source
 skeleton for you. Each (public) GUI class has a derivative user class
 for you to modify and extend.
 
+%description -l pl
+Glademm to ³±cze do glade dla C++. Dziêki niemu z plików glade mozna 
+uzyskaæ szkielet kodu wynikowego w C++. Ka¿da (publiczna) klasa GUI
+posiada klasê pochodn± uzytkownika, któr± mo¿na modyfikowaæ i rozwijaæ.
+
 %prep
 %setup -q
 
