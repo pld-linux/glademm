@@ -1,22 +1,32 @@
 Summary:	C++ frontent for glade
 Summary(pl):	Interfejs C++ do glade
 Name:		glademm
-Version:	0.5_11d
+Version:	0.6.2b
 Release:	1
 License:	GPL
 Group:		Development/Building
+Group(cs):	Základ/Vývoj
+Group(da):	Udvikling/Bygge
 Group(de):	Entwicklung/Bauen
+Group(es):	Desarrollo/Construcción
+Group(fr):	Développement/Construction
+Group(it):	Sviluppo/Sviluppo
+Group(no):	Utvikling/Bygge
 Group(pl):	Programowanie/Budowanie
+Group(pt):	Desenvolvimento/Criação
+Group(ru):	òÁÚÒÁÂÏÔËÁ/óÔÒÏÅÎÉÅ
+Group(sv):	Utveckling/Bygga
+Group(uk):	òÏÚÒÏÂËÁ/âÕÄÏ×Á
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
 Patch0:		%{name}-configure.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	libstdc++-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	gtkmm-devel >= 1.2.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_prefix   	/usr
 
 %description
 This is a C++ backend for glade, the GUI designer for Gtk. This means
@@ -35,7 +45,9 @@ rozwijaæ.
 %patch0 -p1
 
 %build
+rm -f missing
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+libtoolize --copy --force
 aclocal
 autoconf
 automake -a -c
@@ -46,7 +58,8 @@ automake -a -c
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS BUGS ChangeLog NEWS README TODO docs/*.txt
 
