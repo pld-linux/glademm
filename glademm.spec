@@ -27,9 +27,9 @@ skeleton for you. Each (public) GUI class has a derivative user class
 for you to modify and extend.
 
 %description -l pl
-Glademm to ³±cze do glade dla C++. Dziêki niemu z plików glade mozna
+Glademm to ³±cze do glade dla C++. Dziêki niemu z plików glade mo¿na
 uzyskaæ szkielet kodu wynikowego w C++. Ka¿da (publiczna) klasa GUI
-posiada klasê pochodn± uzytkownika, któr± mo¿na modyfikowaæ i
+posiada klasê pochodn± u¿ytkownika, któr± mo¿na modyfikowaæ i
 rozwijaæ.
 
 %prep
