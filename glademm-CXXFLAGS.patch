@@ -1,0 +1,13 @@
+diff -Nru glademm-0.5.9/configure.in glademm-0.5.9.new/configure.in
+--- glademm-0.5.9/configure.in	Wed Jun  7 09:49:03 2000
++++ glademm-0.5.9.new/configure.in	Sun Oct 29 17:55:20 2000
+@@ -9,9 +9,6 @@
+ AM_INIT_AUTOMAKE(glademm, 0.5.9)
+ AM_CONFIG_HEADER(config.h)
+ 
+-CXXFLAGS="-g -Wall"
+-# omit -O2 while programming
+-
+ #INCLUDES=-I/home/share/safeSTL
+ 
+ AC_PREFIX_DEFAULT(/usr/local)
