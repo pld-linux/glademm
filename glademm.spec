@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Development/Building
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
+# Source0-md5:	d3ca687aeb4cf3d45bd5ad59dd1f9f48
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-types.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
