@@ -1,6 +1,6 @@
 Summary:	C++ frontent for glade
 Name:		glademm
-Version:	0.5.7c
+Version:	0.5.9
 Release:	1
 License:	GPL
 Group:		Development/Building
