@@ -7,6 +7,7 @@ Group:		Development/Building
 Group(de):	Entwicklung/Bauen
 Group(pl):	Programowanie/Budowanie
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
+Patch0:		%{name}-configure.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	autoconf
 BuildRequires:	libstdc++-devel
@@ -30,10 +31,13 @@ rozwijaæ.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+aclocal
 autoconf
+automake -a -c
 %configure
 
 %{__make}

@@ -1,0 +1,10 @@
+--- glademm-0.5_10/configure.in~	Mon Nov  6 11:46:09 2000
++++ glademm-0.5_10/configure.in	Sat Nov 24 20:49:28 2001
+@@ -48,6 +48,7 @@
+ ],[
+   k<int,foo,float,int,int,foo*,foo**> a;
+ ],[
++  true
+ ],[
+   AC_ERROR(your C++ compiler does not support templates well enough)
+ ]) 
