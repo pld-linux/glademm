@@ -1,19 +1,21 @@
 Summary:	C++ frontent for glade
 Summary(pl):	Interfejs C++ do glade
 Name:		glademm
-Version:	2.0.0
-Release:	0.1
+Version:	2.0.0.1
+Release:	1
 License:	GPL
 Group:		Development/Building
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
-# Source0-md5:	c6021ad728bd7a063732e8e7053a2aa6
+# Source0-md5:	82cae27b35978b1122abb138cc1683d4
 Patch0:		%{name}-configure.patch
-Patch1:		%{name}-assert.patch
+Patch1:		%{name}-gnome-config.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRequires:	gtkmm-devel >= 2.2.7
+BuildRequires:	libbonobouimm-devel >= 1.3.6
+BuildRequires:	libgnomeuimm-devel >= 2.0.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
