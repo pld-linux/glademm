@@ -1,9 +1,10 @@
 Summary:	C++ frontent for glade
 Name:		glademm
-Version:	0.5.7
+Version:	0.5.7c
 Release:	1
 License:	GPL
 Group:		Development/Building
+Group(pl):	Programowanie/Budowanie
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	libstdc++-devel
@@ -15,9 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a C++ backend for glade, the GUI designer for Gtk. This means this
-program reads glade files and outputs a C++ program source skeleton for you. 
-Each (public) GUI class has a derivative user class for you to modify and
-extend.
+program reads glade files and outputs a C++ program source skeleton for
+you. Each (public) GUI class has a derivative user class for you to modify
+and extend.
 
 %prep
 %setup -q
