@@ -1,4 +1,5 @@
 Summary:	C++ frontent for glade
+Summary(pl):	Interfejs C++ do glade
 Name:		glademm
 Version:	0.5_11d
 Release:	1
