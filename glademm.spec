@@ -38,7 +38,7 @@ rozwijaæ.
 rm -f missing
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
