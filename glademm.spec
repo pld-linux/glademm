@@ -31,12 +31,12 @@ posiada klasê pochodn± uzytkownika, któr± mo¿na modyfikowaæ i rozwijaæ.
 %build
 %configure
 
-make CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions"
+%{__make} CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install-strip DESTDIR=$RPM_BUILD_ROOT
+%{__make} install-strip DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS BUGS ChangeLog NEWS README TODO docs/*.txt
 
