@@ -35,7 +35,7 @@ rozwijaæ.
 %build
 rm -f missing
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %{__automake}
