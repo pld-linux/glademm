@@ -34,7 +34,7 @@ rozwijaæ.
 %patch -p1
 
 %build
-CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -fno-rtti -fno-exceptions"
+CXXFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
 autoconf
 %configure
 
