@@ -37,8 +37,8 @@ rm -f missing
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
