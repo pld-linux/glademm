@@ -15,10 +15,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix   	/usr
 
 %description
-This is a C++ backend for glade, the GUI designer for Gtk. This means this
-program reads glade files and outputs a C++ program source skeleton for
-you. Each (public) GUI class has a derivative user class for you to modify
-and extend.
+This is a C++ backend for glade, the GUI designer for Gtk. This means
+this program reads glade files and outputs a C++ program source
+skeleton for you. Each (public) GUI class has a derivative user class
+for you to modify and extend.
 
 %prep
 %setup -q
