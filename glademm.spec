@@ -1,13 +1,12 @@
 Summary:	C++ frontent for glade
 Name:		glademm
-Version:	0.5.9
-Release:	2
+Version:	0.5_10
+Release:	1
 License:	GPL
 Group:		Development/Building
 Group(de):	Entwicklung/Bauen
 Group(pl):	Programowanie/Budowanie
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
-Patch0:		%{name}-CXXFLAGS.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	autoconf
 BuildRequires:	libstdc++-devel
@@ -31,7 +30,6 @@ rozwijaæ.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 CXXFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
