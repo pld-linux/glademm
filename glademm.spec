@@ -2,18 +2,19 @@ Summary:	C++ frontent for glade
 Summary(pl):	Interfejs C++ do glade
 Name:		glademm
 Version:	0.6.2b
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Building
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
 Patch0:		%{name}-configure.patch
+Patch1:		%{name}-types.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	libstdc++-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	gtkmm-devel >= 1.2.3
+BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,6 +32,7 @@ rozwijaæ.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
@@ -49,12 +51,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf AUTHORS BUGS ChangeLog NEWS README TODO docs/*.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz docs/*gz
+%doc AUTHORS BUGS ChangeLog NEWS README TODO docs/*.txt
 %attr(755, root,root) %{_bindir}/*
