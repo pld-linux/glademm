@@ -32,7 +32,7 @@ rozwijaæ.
 %setup -q
 
 %build
-CXXFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 autoconf
 %configure
 
