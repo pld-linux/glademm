@@ -1,10 +1,24 @@
---- glademm-0.5_10/configure.in~	Mon Nov  6 11:46:09 2000
-+++ glademm-0.5_10/configure.in	Sat Nov 24 20:49:28 2001
-@@ -48,6 +48,7 @@
+diff -urN glademm-0.6.2b.org/configure.in glademm-0.6.2b/configure.in
+--- glademm-0.6.2b.org/configure.in	Sun Feb 17 20:19:07 2002
++++ glademm-0.6.2b/configure.in	Sun Feb 17 20:20:48 2002
+@@ -47,8 +47,9 @@
+ };
  ],[
    k<int,foo,float,int,int,foo*,foo**> a;
- ],[
-+  true
- ],[
+-],
+- ,[
++],[
++ true
++ ],[
    AC_ERROR(your C++ compiler does not support templates well enough)
  ]) 
+ AC_MSG_RESULT([ok])
+@@ -185,7 +186,7 @@
+   AC_MSG_RESULT(gnome-config not found)
+ elif test -r "$gnomelib/gnomemmConf.sh" 
+ then
+-  source $gnomelib/gnomemmConf.sh
++  . $gnomelib/gnomemmConf.sh
+   if test "x$MODULE_VERSION" = "x"
+   then
+     AC_MSG_RESULT(no version info available)
