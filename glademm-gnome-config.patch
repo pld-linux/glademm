@@ -1,0 +1,12 @@
+diff -urN aaa/glademm-2.0.0/src/glade--.cc glademm-2.0.0/src/glade--.cc
+--- aaa/glademm-2.0.0/src/glade--.cc	2003-05-01 10:17:46.000000000 +0200
++++ glademm-2.0.0/src/glade--.cc	2003-08-28 08:14:56.000000000 +0200
+@@ -141,7 +141,7 @@
+ 
+    // Pkgconfig checks (Gnome 2)
+    if (Configuration.gnome2) {
+-      if (!!Configuration.pc_version) {
++      if (!Configuration.pc_version) {
+ 	 CheckVersion("pkg-config --silence-errors --modversion gtk+-2.0",Configuration.gtk_version,Pkg_Version::Pkg_Config);
+ 	 CheckVersion("pkg-config --silence-errors --modversion gtkmm-2.0",Configuration.gtkmm_version,Pkg_Version::Pkg_Config);
+ 	 CheckVersion("pkg-config --silence-errors --modversion libgnomemm-2.0",Configuration.libgnomemm_version,Pkg_Version::Pkg_Config);
