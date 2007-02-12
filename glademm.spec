@@ -1,5 +1,5 @@
 Summary:	C++ frontent for glade
-Summary(pl):	Interfejs C++ do glade
+Summary(pl.UTF-8):   Interfejs C++ do glade
 Name:		glademm
 Version:	2.6.0
 Release:	1
@@ -26,11 +26,11 @@ this program reads glade files and outputs a C++ program source
 skeleton for you. Each (public) GUI class has a derivative user class
 for you to modify and extend.
 
-%description -l pl
-Glademm to ³±cze do glade dla C++. Dziêki niemu z plików glade mo¿na
-uzyskaæ szkielet kodu wynikowego w C++. Ka¿da (publiczna) klasa GUI
-posiada klasê pochodn± u¿ytkownika, któr± mo¿na modyfikowaæ i
-rozwijaæ.
+%description -l pl.UTF-8
+Glademm to Å‚Ä…cze do glade dla C++. DziÄ™ki niemu z plikÃ³w glade moÅ¼na
+uzyskaÄ‡ szkielet kodu wynikowego w C++. KaÅ¼da (publiczna) klasa GUI
+posiada klasÄ™ pochodnÄ… uÅ¼ytkownika, ktÃ³rÄ… moÅ¼na modyfikowaÄ‡ i
+rozwijaÄ‡.
 
 %prep
 %setup -q
