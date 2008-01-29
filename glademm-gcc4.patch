@@ -1,0 +1,11 @@
+--- glademm-2.6.0/src/writers/gnome_app.hh~	2002-04-02 17:14:58.000000000 +0200
++++ glademm-2.6.0/src/writers/gnome_app.hh	2008-01-29 22:22:03.375174515 +0100
+@@ -28,7 +28,7 @@
+ 	virtual bool NeedExplicitCtor(const Widget &w) const;
+ 	virtual void ConstructionArgs(const Widget &w, CxxFile &f) const;
+ 	virtual void Configure(const Widget &w, CxxFile &f,const std::string &instance) const;
+-	virtual Subwidget Gnome_App::IsSubwidget(const Widget &w,const Widget &ch) const;
++	virtual Subwidget IsSubwidget(const Widget &w,const Widget &ch) const;
+ 	virtual const std::string InternalInstance(const Widget &parent,const Widget &w2) const;
+ 	virtual void AddChildren(const Widget &w,CxxFile &f,const std::string &instance,const WriterBase &writer_for_subw, const Widget &widget_for_subw) const;
+ };
