@@ -2,13 +2,14 @@ Summary:	C++ frontent for glade
 Summary(pl.UTF-8):	Interfejs C++ do glade
 Name:		glademm
 Version:	2.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Building
 Source0:	http://home.wtal.de/petig/Gtk/%{name}-%{version}.tar.gz
 # Source0-md5:	e88be4e895ff3b99d8ae39e799b714a2
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-gnome-config.patch
+Patch2:		%{name}-gcc4.patch
 URL:		http://home.wtal.de/petig/Gtk/index.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -36,6 +37,7 @@ rozwijać.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
